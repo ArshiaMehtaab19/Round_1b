@@ -1,0 +1,137 @@
+{
+  "metadata": {
+    "documents": [
+      "50 page sample PDF.indd.pdf",
+      "file01.pdf",
+      "sample pdf.pdf",
+      "test.pdf"
+    ],
+    "persona": "PhD Researcher in Computational Biology",
+    "job_to_be_done": "Prepare a literature review focusing on methodologies, datasets, and performance benchmarks",
+    "timestamp": "2025-07-28T14:16:53.842787"
+  },
+  "relevant_sections": [
+    {
+      "document": "sample pdf.pdf",
+      "page_number": 22,
+      "section_title": "Heuristic design still mostly depends on the researcher\u2019s sk...",
+      "importance_rank": 1
+    },
+    {
+      "document": "test.pdf",
+      "page_number": 22,
+      "section_title": "Heuristic design still mostly depends on the researcher\u2019s sk...",
+      "importance_rank": 2
+    },
+    {
+      "document": "sample pdf.pdf",
+      "page_number": 13,
+      "section_title": "Nowadays combinatorial optimization problems arise in many c...",
+      "importance_rank": 3
+    },
+    {
+      "document": "sample pdf.pdf",
+      "page_number": 14,
+      "section_title": "We start from a thorough explanation of the case study probl...",
+      "importance_rank": 4
+    },
+    {
+      "document": "sample pdf.pdf",
+      "page_number": 20,
+      "section_title": "MAP was studied by many researchers. Several special cases o...",
+      "importance_rank": 5
+    },
+    {
+      "document": "sample pdf.pdf",
+      "page_number": 21,
+      "section_title": "but only for a few classes of them polynomial time exact alg...",
+      "importance_rank": 6
+    },
+    {
+      "document": "sample pdf.pdf",
+      "page_number": 23,
+      "section_title": "up a powerful solver. In Section 2.4 we propose two algorith...",
+      "importance_rank": 7
+    },
+    {
+      "document": "sample pdf.pdf",
+      "page_number": 37,
+      "section_title": "requires ns values. Construction heuristics are very quick a...",
+      "importance_rank": 8
+    },
+    {
+      "document": "test.pdf",
+      "page_number": 13,
+      "section_title": "Nowadays combinatorial optimization problems arise in many c...",
+      "importance_rank": 9
+    },
+    {
+      "document": "test.pdf",
+      "page_number": 14,
+      "section_title": "We start from a thorough explanation of the case study probl...",
+      "importance_rank": 10
+    }
+  ],
+  "subsection_analysis": [
+    {
+      "document": "sample pdf.pdf",
+      "page_number": 22,
+      "refined_text": "Heuristic design still mostly depends on the researcher\u2019s skills; there are just\na few tools to support the scientist in this process. In this chapter we show\nseveral examples of how such tools can help in heuristic design.\nIf a heuristic provides no solution quality or running time guarantee,\nthe only choice to evaluate it is to use empirical analysis. One of the most\nimportant aspects of computational experiment design is test bed selection.\nIn Section 2.1 we discuss MAP test bed design.\nIt turns out that there exist no standard test bed for MAP which would\ncover at least the most natural cases of the problem.\nIn Section 2.1, we\ngather all the instance classes proposed in the literature and systematize\nthem.\nWe also split all the instances into two classes according to some\nimportant properties. This helps in further experimental analysis.\nUnfortunately, there is no way to \ufb01nd the optimal solutions for the in-\nstances of the MAP test bed even of a moderate size in any reasonable time.\nHowever, in certain circumstances, it is possible to estimate the optimal so-\nlution values. In Section 2.2 we show an example of such estimation for one\nof the most widely used MAP instances family.\nIn Section 2.3 we show a successful example of producing a test bed for\nGTSP from a well-known TSP test bed.\nThen we show two examples of improvement of heuristic performance.\nObserve that even a small reduction of the problem size can noticeably speed",
+      "importance_rank": 1
+    },
+    {
+      "document": "test.pdf",
+      "page_number": 22,
+      "refined_text": "Heuristic design still mostly depends on the researcher\u2019s skills; there are just\na few tools to support the scientist in this process. In this chapter we show\nseveral examples of how such tools can help in heuristic design.\nIf a heuristic provides no solution quality or running time guarantee,\nthe only choice to evaluate it is to use empirical analysis. One of the most\nimportant aspects of computational experiment design is test bed selection.\nIn Section 2.1 we discuss MAP test bed design.\nIt turns out that there exist no standard test bed for MAP which would\ncover at least the most natural cases of the problem.\nIn Section 2.1, we\ngather all the instance classes proposed in the literature and systematize\nthem.\nWe also split all the instances into two classes according to some\nimportant properties. This helps in further experimental analysis.\nUnfortunately, there is no way to \ufb01nd the optimal solutions for the in-\nstances of the MAP test bed even of a moderate size in any reasonable time.\nHowever, in certain circumstances, it is possible to estimate the optimal so-\nlution values. In Section 2.2 we show an example of such estimation for one\nof the most widely used MAP instances family.\nIn Section 2.3 we show a successful example of producing a test bed for\nGTSP from a well-known TSP test bed.\nThen we show two examples of improvement of heuristic performance.\nObserve that even a small reduction of the problem size can noticeably speed",
+      "importance_rank": 2
+    },
+    {
+      "document": "sample pdf.pdf",
+      "page_number": 13,
+      "refined_text": "Nowadays combinatorial optimization problems arise in many circumstances,\nand we need to be able to solve these problems e\ufb03ciently. Unfortunately,\nmany of these problems are proven to be NP-hard, i.e., it is often impossible\nto solve the instances in any reasonable time.\nHowever, in practice one usually does not need an exact solution of the\nproblem. In this case one can use a heuristic algorithm which yields a near-\noptimal solution in a satisfactory time.\nSome of the heuristics, so-called\napproximation algorithms, guarantee certain solution quality and the poly-\nnomial running time. Unfortunately, this nice theoretical property is usually\nachieved at the cost of relatively poor performance. In other words, a simple\nheuristic is often faster and yields better solutions than an approximation\nalgorithm, though a simple heuristic does not guarantee any quality and in\ncertain cases it yields very bad solutions.\nIn this research we focus on heuristic algorithms which usually have no\nguaranteed solution quality.\nWe are interested in design and selection of\nthe most e\ufb03cient algorithms for real-world use and, thus, we pay a lot of\nattention to experimental evaluation.\nAs a case study we consider two combinatorial optimization problems: the\nGeneralized Traveling Salesman Problem (GTSP) and the Multidimensional\nAssignment Problem (MAP). Both problems are known to be NP-hard and\neach has a host of applications.\nThough both GTSP and MAP are very important, the researchers did not\npay enough attention to certain areas around these problems. In particular,",
+      "importance_rank": 3
+    },
+    {
+      "document": "sample pdf.pdf",
+      "page_number": 14,
+      "refined_text": "We start from a thorough explanation of the case study problems, their\napplications and existing solution methods.\nChapter 2 is devoted to some approaches in heuristic design. It discusses\ntest bed construction, shows several examples on how theoretical tools can\nhelp in design of practically e\ufb03cient heuristics and provides a set of advices\non high-performance implementation of an algorithm.\nChapter 3 introduces a classi\ufb01cation of GTSP neighborhoods, proposes\nseveral new ones and includes a number of algorithms and improvements\nwhich signi\ufb01cantly speed up exploration of these neighborhoods both theo-\nretically and practically. Special attention is paid to adaptation for GTSP of\nthe well-known Lin-Kernighan heuristic, originally designed for the Traveling\nSalesman Problem.\nChapter 4, similar to Chapter 3, considers the MAP neighborhoods and\nlocal search algorithms. It splits all the MAP neighborhoods into two classes,\ngeneralizes the existing approaches, proposes some new ones and, \ufb01nally,\nconsiders a combined local search which explores neighborhoods of both types\ntogether. An extensive experimental analysis is intended to select the most\nsuccessful heuristics.\nChapter 5 is devoted to the so-called Memetic Algorithms (MA). MA\nis a kind of evolutionary algorithms which applies an improvement proce-\ndure to every candidate solution. Several evolutionary algorithms for GTSP,\nincluding MAs, are already presented in the literature. We propose a new\nMA which features a powerful local search and an e\ufb03cient termination cri-\nterion. It also uses some other improvements like variation of the population\nsize according to the instance size. In our experiments, this algorithm clearly\noutperforms all GTSP metaheuristics known from the literature with respect\nto both solution quality and running time.",
+      "importance_rank": 4
+    },
+    {
+      "document": "sample pdf.pdf",
+      "page_number": 20,
+      "refined_text": "MAP was studied by many researchers. Several special cases of the prob-\nlem were intensively studied in the literature (see [70] and references there)",
+      "importance_rank": 5
+    },
+    {
+      "document": "sample pdf.pdf",
+      "page_number": 21,
+      "refined_text": "but only for a few classes of them polynomial time exact algorithms were\nfound, see, e.g., [14, 15, 54].\nIn many cases MAP remains hard to solve\n[15, 19, 70, 97]. For example, if there are three sets of points of size n on a\nEuclidean plane and the objective is to \ufb01nd n triples, every triple has a point\nin each set, such that the total circumference or area of the corresponding\ntriangles is minimal, the corresponding 3-APs are still NP-hard [97]. Apart\nfrom proving NP-hardness, researchers studied asymptotic properties of some\nspecial instance families [32].\nAs regards the solution methods, there exist several exact and approx-\nimation algorithms [7, 19, 70, 85, 86] and a number of heuristics including\nconstruction heuristics [7, 35, 81], greedy randomized adaptive search pro-\ncedures [1, 77, 81, 93] (including several concurrent implementations, see,\ne.g., [1, 81]) and a host of local search procedures [1, 7, 8, 15, 16, 52, 81, 93].\nTwo metaheuristics were proposed for MAP in the literature, namely a\nsimulated annealing procedure [16] and a memetic algorithm [52].",
+      "importance_rank": 6
+    },
+    {
+      "document": "sample pdf.pdf",
+      "page_number": 23,
+      "refined_text": "up a powerful solver. In Section 2.4 we propose two algorithms intended to\nreduce the size of a GTSP instance. Our experiments show that this prepro-\ncessing may successfully reduce the running time of many GTSP algorithms\nknown from the literature.\nAnother way to improve heuristic performance is to optimize the algo-\nrithm with respect to the hardware architecture. In particular, an extremely\nimportant aspect is how the algorithm uses the main memory. Indeed, com-\nputer memory is a complicated subsystem and its performance signi\ufb01cantly\ndepends on the way it is used. It appears that one has to follow just a few\nsimple rules in order to improve virtually any algorithm to make it \u2018friendly\u2019\nwith respect to computer memory. In Section 2.5 we use three existing and\none new construction heuristics for MAP as an example and show how these\nalgorithms can be improved.\nWe also discuss the questions of selecting the most convenient and e\ufb03cient\ndata structures on the example of GTSP in Section 2.6.",
+      "importance_rank": 7
+    },
+    {
+      "document": "sample pdf.pdf",
+      "page_number": 37,
+      "refined_text": "requires ns values. Construction heuristics are very quick and, hence, we are\nable to consider very large instances such that the weight matrices exceed\nthe size of processor cache.\nIn Section 2.5.1 we describe all MAP construction heuristics known from\nthe literature and propose a new one, Shift-ROM. In Section 2.5.2 we dis-\ncuss the e\ufb03ciency of computer memory in certain circumstances and provide\nseveral simple rules to improve performance of an algorithm implementa-\ntion. Then, in Section 2.5.3, we show how these rules can be applied to the\nMAP construction heuristics. We do not provide any experimental analysis\nhere; one can refer to [62] for details. We only declare here that the re\ufb01ne-\nments proposed below speed up each of the considered heuristics in, roughly\nspeaking, 2 to 5 times.",
+      "importance_rank": 8
+    },
+    {
+      "document": "test.pdf",
+      "page_number": 13,
+      "refined_text": "Nowadays combinatorial optimization problems arise in many circumstances,\nand we need to be able to solve these problems e\ufb03ciently. Unfortunately,\nmany of these problems are proven to be NP-hard, i.e., it is often impossible\nto solve the instances in any reasonable time.\nHowever, in practice one usually does not need an exact solution of the\nproblem. In this case one can use a heuristic algorithm which yields a near-\noptimal solution in a satisfactory time.\nSome of the heuristics, so-called\napproximation algorithms, guarantee certain solution quality and the poly-\nnomial running time. Unfortunately, this nice theoretical property is usually\nachieved at the cost of relatively poor performance. In other words, a simple\nheuristic is often faster and yields better solutions than an approximation\nalgorithm, though a simple heuristic does not guarantee any quality and in\ncertain cases it yields very bad solutions.\nIn this research we focus on heuristic algorithms which usually have no\nguaranteed solution quality.\nWe are interested in design and selection of\nthe most e\ufb03cient algorithms for real-world use and, thus, we pay a lot of\nattention to experimental evaluation.\nAs a case study we consider two combinatorial optimization problems: the\nGeneralized Traveling Salesman Problem (GTSP) and the Multidimensional\nAssignment Problem (MAP). Both problems are known to be NP-hard and\neach has a host of applications.\nThough both GTSP and MAP are very important, the researchers did not\npay enough attention to certain areas around these problems. In particular,",
+      "importance_rank": 9
+    },
+    {
+      "document": "test.pdf",
+      "page_number": 14,
+      "refined_text": "We start from a thorough explanation of the case study problems, their\napplications and existing solution methods.\nChapter 2 is devoted to some approaches in heuristic design. It discusses\ntest bed construction, shows several examples on how theoretical tools can\nhelp in design of practically e\ufb03cient heuristics and provides a set of advices\non high-performance implementation of an algorithm.\nChapter 3 introduces a classi\ufb01cation of GTSP neighborhoods, proposes\nseveral new ones and includes a number of algorithms and improvements\nwhich signi\ufb01cantly speed up exploration of these neighborhoods both theo-\nretically and practically. Special attention is paid to adaptation for GTSP of\nthe well-known Lin-Kernighan heuristic, originally designed for the Traveling\nSalesman Problem.\nChapter 4, similar to Chapter 3, considers the MAP neighborhoods and\nlocal search algorithms. It splits all the MAP neighborhoods into two classes,\ngeneralizes the existing approaches, proposes some new ones and, \ufb01nally,\nconsiders a combined local search which explores neighborhoods of both types\ntogether. An extensive experimental analysis is intended to select the most\nsuccessful heuristics.\nChapter 5 is devoted to the so-called Memetic Algorithms (MA). MA\nis a kind of evolutionary algorithms which applies an improvement proce-\ndure to every candidate solution. Several evolutionary algorithms for GTSP,\nincluding MAs, are already presented in the literature. We propose a new\nMA which features a powerful local search and an e\ufb03cient termination cri-\nterion. It also uses some other improvements like variation of the population\nsize according to the instance size. In our experiments, this algorithm clearly\noutperforms all GTSP metaheuristics known from the literature with respect\nto both solution quality and running time.",
+      "importance_rank": 10
+    }
+  ]
+}
